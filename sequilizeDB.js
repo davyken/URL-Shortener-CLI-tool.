@@ -1,10 +1,10 @@
-import { Sequelize } from 'sequelize';
+import { Sequilize } from 'sequilize';
 import dotenv from 'dotenv';
 dotenv.config();
 import { program } from 'commander';
 
 
-const sequelize = new Sequelize(
+const sequilize = new Sequilize(
   process.env.DB_DATABASE,
   process.env.DB_USER,
   process.env.DB_PASSWORD,
@@ -23,5 +23,5 @@ sequelize.authenticate()
     console.error('Unable to connect to the database:', error);
   });
 
-export default sequelize;
+export default sequilize;
 

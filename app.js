@@ -2,7 +2,7 @@
 
 import { program } from 'commander';
 import  executeCLI  from './shorten.js';
-import sequelize from './sequelizeDB.js'; 
+import sequilize from './sequilizeDB.js'; 
 import { config } from 'dotenv';
 config();
 
