@@ -21,4 +21,4 @@ async function authenticate() {
   }
 }
 
-authenticate()
+authenticate();
