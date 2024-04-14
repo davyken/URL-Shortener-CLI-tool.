@@ -12,7 +12,7 @@ program
 
 async function authenticate() {
   try {
-    await sequelize.authenticate();
+    await sequilize.authenticate();
     console.log('Database connection establishement successful.');
     executeCLI();
   } catch (error) {
