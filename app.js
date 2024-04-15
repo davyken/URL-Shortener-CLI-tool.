@@ -2,7 +2,7 @@
 
 import { program } from 'commander';
 import  executeCLI  from './shorten.js';
-import pool from './DB.js'; 
+import sequelize from './sequelizeDB.js'; 
 import { config } from 'dotenv';
 config();
 
@@ -12,7 +12,7 @@ program
 
 async function authenticate() {
   try {
-    await pool.authenticate();
+    await sequelize.authenticate();
     console.log('Database connection establishement successful.');
     executeCLI();
   } catch (error) {

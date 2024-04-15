@@ -1,9 +1,9 @@
-import { pool } from './DB.js';
+import { Sequelize, DataTypes } from 'sequelize';
 import { config } from 'dotenv';
 config();
 
 
-const pool = new pool(
+const sequelize = new Sequelize(
   process.env.DB_DATABASE,
   process.env.DB_USER,
   process.env.DB_PASSWORD,
@@ -13,7 +13,7 @@ const pool = new pool(
   }
 );
 
-const Url = pool.define('Url', {
+const Url = sequelize.define('Url', {
   long_url: {
     type: DataTypes.STRING,
     allowNull: false,
